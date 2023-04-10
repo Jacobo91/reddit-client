@@ -1,0 +1,59 @@
+.post{
+    display: flex;
+    flex: 5;
+    margin: 20px;
+    box-shadow: 1px 7px 10px rgb(162, 162, 162);
+}
+/* likes */
+.likes {
+    flex: 1;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+}
+
+.number-of-likes{
+    margin: 15px 0;
+}
+
+/* post-content */
+.post-content{
+    flex: 8;
+}
+/*===============*/
+.post-title{
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.post-image-wrapper{
+    width: 100%;
+}
+
+.post-image{
+    max-width: 95%;
+}
+
+hr{
+    width: 95%;
+    margin-top: 20px;
+}
+
+/* post-info */
+
+.post-info{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+    font-size: 0.7rem;
+}
+
+.user-name{
+    margin-left: 20px;
+    color: var(--purple);
+}

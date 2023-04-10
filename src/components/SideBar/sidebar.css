@@ -1,0 +1,22 @@
+aside{
+    display: none;
+    flex: 2;
+    margin-top: 20px;
+    box-shadow: 1px 7px 10px rgb(162, 162, 162);
+}
+
+.aside-title{
+    padding: 20px;
+}
+
+@media only screen and (min-width: 600px){
+    aside{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+    aside {
+        flex: 3;
+    }
+}

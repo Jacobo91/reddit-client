@@ -1,0 +1,43 @@
+/* global styles */
+
+.flex-center-y-axis{
+    display: flex;
+    align-items: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.margin-inline{
+    margin-inline: 10px;
+}
+
+/*===============*/
+
+.header {
+    box-shadow: 1px 1px 20px rgb(162, 162, 162);
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 3rem;
+}
+
+.highlight{
+    color: var(--purple);
+}
+
+.searchbar{
+    width: 50%;
+}
+
+.search-input{
+    height: 2rem;
+    width: 60%;
+    text-indent: 5px;
+    outline-color: var(--purple);
+}
+
+
