@@ -7,7 +7,7 @@ export default function Posts(){
 
     const subReddits = useSelector(selectSubReddits);
     const param = useParams();
-    const lowerCaseParam = param.forum.toLowerCase();
+    const lowerCaseParam = param.forum ? param.forum.toLowerCase() : '';
     const endPoint = `https://www.reddit.com/r/${lowerCaseParam}.json`;
     return(
         <PostItem/>
