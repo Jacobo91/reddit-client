@@ -12,7 +12,9 @@ export default function Header(){
 
             <div className='searchbar' >
                 <input type="text" placeholder='Search' className='search-input'/>
-                <i class="fa-solid fa-magnifying-glass margin-inline"></i>
+                <button>
+                    <i class="fa-solid fa-magnifying-glass margin-inline"></i>
+                </button>
             </div>
 
             <span></span>

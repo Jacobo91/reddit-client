@@ -1,12 +1,42 @@
 aside{
+    background-color: #FFFFFF;
+    margin: 20px 0px 36px 0px;
     display: none;
     flex: 2;
-    margin-top: 20px;
+    padding: 24px 16px 24px 24px;
     box-shadow: 1px 7px 10px rgb(162, 162, 162);
 }
 
 .aside-title{
-    padding: 20px;
+    margin: 0 0 20px;
+}
+
+
+
+li{
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+li > * {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+li > *:hover{
+    background-color: var(--light-grey);
+}
+
+.navlink{
+    display: flex;
+    align-items: center;
+}
+
+.active{
+    border-left: 4px solid var(--purple);
+    background-color: rgba(61, 90, 241, 0.2);
 }
 
 @media only screen and (min-width: 600px){

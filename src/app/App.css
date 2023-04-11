@@ -7,8 +7,17 @@
 
 :root{
     --purple: #3D5AF1;
+    --light-grey: #F2F2F2;
 }
 
 main{
     display: flex;
+}
+
+button{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 0.7rem;
+    cursor: pointer;
 }

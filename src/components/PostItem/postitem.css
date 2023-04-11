@@ -57,3 +57,7 @@ hr{
     margin-left: 20px;
     color: var(--purple);
 }
+
+.fa-comment{
+    margin-right: 2px;
+}

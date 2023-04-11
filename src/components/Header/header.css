@@ -31,6 +31,8 @@
 
 .searchbar{
     width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .search-input{
@@ -38,6 +40,10 @@
     width: 60%;
     text-indent: 5px;
     outline-color: var(--purple);
+}
+
+.fa-magnifying-glass{
+    font-size: 1rem;
 }
 
 
