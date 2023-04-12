@@ -7,7 +7,6 @@ export const loadsubReddits = createAsyncThunk(
         try{
             const response = await fetch('https://www.reddit.com/subreddits.json');
             const data = await response.json();
-            console.log(`thunks: ${data}`)
             return data
         }
         catch(error){
@@ -36,7 +35,6 @@ export const subredditsSlice = createSlice(
                     state.isLoading = false;
                     state.hasError = false;
                     state.subReddits = action.payload;
-                    console.log(`extrareducer: ${action.payload}`)
                 })
                 .addCase(loadsubReddits.rejected, (state) => {
                     state.isLoading = false;

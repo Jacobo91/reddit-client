@@ -1,10 +1,10 @@
 aside{
     background-color: #FFFFFF;
     margin: 20px 0px 36px 0px;
-    display: none;
     flex: 2;
     padding: 24px 16px 24px 24px;
     box-shadow: 1px 7px 10px rgb(162, 162, 162);
+    max-height: 1696px;
 }
 
 .aside-title{
@@ -32,21 +32,25 @@ li > *:hover{
 .navlink{
     display: flex;
     align-items: center;
+    letter-spacing: 0.5px;
 }
 
 .active{
     border-left: 4px solid var(--purple);
     background-color: rgba(61, 90, 241, 0.2);
+    color: var(--purple);
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px){
     aside{
-        display: block;
+        margin: 20px 0px 0px 0px;
+        box-shadow: 1px -2px 10px rgb(162, 162, 162);
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px){
     aside {
-        flex: 3;
+        flex: 4;
+        align-self: flex-start;
     }
 }

@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { loadsubReddits } from '../redux/subreddits/subredditsSlice';
+import Home from '../components/Home/Home';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       <Header/>
       <main>
         <Routes>
-          <Route path='/' element={<Posts/>} />
+        <Route path='/' element={<Home/>} />
           <Route path='/r/:forum' element={<Posts/>} />
         </Routes>
         <SideBar />

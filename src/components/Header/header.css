@@ -42,7 +42,7 @@
     outline-color: var(--purple);
 }
 
-.fa-magnifying-glass{
+.fa-magnifying-glass, .fa-x{
     font-size: 1rem;
 }
 

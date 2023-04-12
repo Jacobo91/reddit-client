@@ -11,7 +11,7 @@
 }
 
 main{
-    display: flex;
+    display: grid;
 }
 
 button{
@@ -20,4 +20,10 @@ button{
     background-color: transparent;
     font-size: 0.7rem;
     cursor: pointer;
+}
+
+@media only screen and (min-width: 600px){
+    main{
+        display: flex;
+    }
 }
