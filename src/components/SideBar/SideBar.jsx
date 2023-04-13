@@ -1,14 +1,21 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './sidebar.css';
 import { NavLink } from 'react-router-dom';
 import { selectSubReddits } from '../../redux/subreddits/subredditsSlice';
 import {ThreeDots} from 'react-loader-spinner';
+import { clearSearchTerm } from '../../redux/searchterm/searchTermSlice';
 
 export default function SideBar(){
 
     const subReddits = useSelector(selectSubReddits)
 
     const loading = subReddits.isLoading;
+
+    const dispatch = useDispatch();
+
+    function handleClearSearchTerm(){
+        dispatch(clearSearchTerm())
+    }
 
     return(
         <aside>
@@ -29,7 +36,10 @@ export default function SideBar(){
                     /> 
                     : 
                     subReddits.data.children.map((subReddit) => (
-                        <li key={subReddit.data.display_name}>
+                        <li 
+                            key={subReddit.data.display_name}
+                            onClick={handleClearSearchTerm}
+                        >
                             <NavLink to={`/r/${subReddit.data.display_name}`} className="navlink bold">
                                 <img 
                                     src={subReddit.data.icon_img} 

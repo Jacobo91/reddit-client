@@ -9,7 +9,7 @@ export const searchbarSlice = createSlice(
                 return action.payload;
             },
             clearSearchTerm: (state, action) => {
-                return '';
+                return "";
             }
         }
     }

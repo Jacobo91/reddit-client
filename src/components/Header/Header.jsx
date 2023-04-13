@@ -1,23 +1,22 @@
 import './header.css';
 import redditLogo from '../../images/redditLogo.png';
-import { selectSearchTerm, setSearchTerm, clearSearchTerm } from '../../redux/searchterm/searchTermSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { setSearchTerm } from '../../redux/searchterm/searchTermSlice';
+import { useDispatch } from 'react-redux';
 import 'animate.css';
+import { useState } from 'react';
 
 
 export default function Header(){
 
-    const term = useSelector(selectSearchTerm);
+    const [myTerm, setMyTerm] = useState('');
     const dispatch = useDispatch();
 
-    function handleOnChange(e){
-        const term = e.target.value
+    function handleSubmit(e){
+        e.preventDefault();
+        const term = myTerm;
         dispatch(setSearchTerm(term))
     }
-    
-    function handleClearSearchTerm(){
-        dispatch(clearSearchTerm())
-    }
+
     return(
         <header className="header flex-center-y-axis">
 
@@ -26,31 +25,24 @@ export default function Header(){
                 <span className='bold logo-word margin-inline'><span className='bold highlight' >Reddit</span>Minimal</span>
             </div>
 
-            <div className='searchbar' >
+            <form 
+                className='searchbar' 
+                onSubmit={handleSubmit}
+            >
 
                 <input 
                     type="text" 
                     placeholder='Search' 
                     className='search-input'
-                    onChange={handleOnChange}
-                    value={term}
+                    value={myTerm}
+                    onChange={(e) => setMyTerm(e.target.value)}
                 />
 
+                <button>
+                    <i className="fa-solid fa-magnifying-glass margin-inline"></i>
+                </button>  
                 
-                    {
-                        term  
-                            ?
-                            <button
-                                onClick={handleClearSearchTerm}
-                            >
-                                <i className="fa-solid fa-x margin-inline"></i>
-                            </button>
-
-                            : 
-                                <i className="fa-solid fa-magnifying-glass margin-inline"></i>                         
-                    }
-                
-            </div>
+            </form>
 
             <span></span>
 
