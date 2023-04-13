@@ -15,6 +15,7 @@ export default function Header(){
         e.preventDefault();
         const term = myTerm;
         dispatch(setSearchTerm(term))
+        setMyTerm('')
     }
 
     return(
